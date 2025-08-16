@@ -58,15 +58,15 @@ public class AgriculturalDroneScorer {
         double dustScore = dustRating + 1;
         int waterproofRating = IPrating % 10;
         double waterproofScore;
-        if (waterproofRating >= 8){
+        if (waterproofRating == 9){
             waterproofScore = 5;
-        }else if (waterproofRating == 7){
+        }else if (waterproofRating >= 7){
             waterproofScore = 4;
         } else if (waterproofRating >= 5) {
             waterproofScore = 3;
         } else if (waterproofRating >= 3){
             waterproofScore = 2;
-        } else if (waterproofRating == 2) {
+        } else if (waterproofRating >= 1) {
             waterproofScore = 1;
         } else {
             waterproofScore = 0;
@@ -157,7 +157,7 @@ public class AgriculturalDroneScorer {
 
         scanner.close();
 
-        //DJI T100 Agricultural Drone Specifications 3WWDZ-U75A
+        //DJI T100 Agricultural Drone Specifications
         /*
         languageSupport: 1
         trainingDays: ?
